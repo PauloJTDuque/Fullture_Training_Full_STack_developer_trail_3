@@ -17,7 +17,3 @@ alert(" A média é: " + v_average);
 
 
 
-
-// }else{
-// 	alert("Reprovado");
-// }
