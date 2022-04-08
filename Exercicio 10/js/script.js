@@ -1,19 +1,17 @@
 
-const v_int_numbers = [ ];
-v_total = 0;
-v_average = 0;
+v_previous_price = 0
+v_current_price=0
 
-for( var i=0; i < 3; i++){
-	v_number = Number(prompt("Digite um numero inteiro: "));
-	v_int_numbers[i] = v_number;
-	v_total = v_total + v_number;
-}
+v_previous_price = Number(prompt("Digite o preço anterior: "));
+v_current_price = Number(prompt("Digite o preço atual: "));
 
-v_min =  Math.min(...v_int_numbers)
-v_average = v_total / 3
 
-alert("O valor mínimo é: "+ v_min)
-alert(" A média é: " + v_average);
+
+alert("Os preços promocionais são: ")
+alert("Preço anterior: R$"+v_previous_price)
+alert("Preço atual com desconto de 10%: R$"+v_current_price*.90)
+alert("Média do preço atual e do preço anterior com desconto de 10%: R$"+((v_previous_price+v_current_price)/2)*.90)
+
 
 
 
