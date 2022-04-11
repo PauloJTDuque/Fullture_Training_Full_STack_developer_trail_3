@@ -1,25 +1,15 @@
-// v_pos_number=0
-// v_neg_number=0
 
-// v_ent_user=prompt("Digite um número diferente de 0:");
-// while(v_ent_user == 0){
-//     v_ent_user=prompt("O número deve ser diferente de 0:");
-// }
 
-// if (v_ent_user > 0){
-//     v_pos_number = v_ent_user;
-//     alert("Numero Positivo:"+v_pos_number);
-// }
-// else{
-//     v_neg_number = v_ent_user;
-//     alert("Numero Negativo:"+v_neg_number);
-// }  
+var v_current_inv = Number(prompt("Digite o estoque atual: "));
+var v_max_inv = Number(prompt("Digite o estoque máximo: "));
+var v_min_inv = Number(prompt("Digite o estoque mínimo: "));
 
-var n = prompt("Digite um numero");
-var total=n/2;
-if(n%2 == 0){
-	alert("Par");
-}else{
-	alert("Impar");
+v_ave_inv = (v_max_inv + v_min_inv)/2;
+
+if (v_current_inv >= v_ave_inv){
+	alert("Não efetuar compra !")
+} else {
+	alert("Efetuar compra !")
 }
-alert(total);
+
+
