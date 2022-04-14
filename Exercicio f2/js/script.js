@@ -1,25 +1,36 @@
-// v_pos_number=0
-// v_neg_number=0
+// 2.	Uma revendedora de carros usados paga a seus funcionários vendedores
+//  um salário fixo por mês, mais uma comissão também fixa para cada carro vendido
+//  e mais 5% do valor das vendas por ele efetuadas. Escrever um algoritmo que 
+// leia o número de carros por ele vendidos, o valor total de suas vendas, 
+// o salário fixo e o valor que ele recebe por carro vendido. Calcule e escreva 
+// o salário final do vendedor
 
-// v_ent_user=prompt("Digite um número diferente de 0:");
-// while(v_ent_user == 0){
-//     v_ent_user=prompt("O número deve ser diferente de 0:");
-// }
 
-// if (v_ent_user > 0){
-//     v_pos_number = v_ent_user;
-//     alert("Numero Positivo:"+v_pos_number);
-// }
-// else{
-//     v_neg_number = v_ent_user;
-//     alert("Numero Negativo:"+v_neg_number);
-// }  
+let carros = [30000, 50000, 40000, 10000, 20000]
+let numeroCarros = 0
+let valorTotalVendas = 50000
+let salarioFixo = 2000
+let valorComissaoPorCarro = 0
+let valorcomissaoTotalVendas = 0.05
+let salarioFInal = 0
 
-var n = prompt("Digite um numero");
-var total=n/2;
-if(n%2 == 0){
-	alert("Par");
-}else{
-	alert("Impar");
+const COMISSAO_FIXA_CARRO= 0.2
+const COMISSAO_TOTAL_VENDAS = 0.05
+
+for (let i=0; i < carros.length; i++){
+	valorComissaoPorCarro = (carros[i] * COMISSAO_FIXA_CARRO) + valorComissaoPorCarro 
+	valorTotalVendas =valorTotalVendas + carros[i]
+	console.log("Valor Comissão por Carro ", valorComissaoPorCarro)
+	console.log("Valor Total Vendas ", valorTotalVendas)
+
 }
-alert(total);
+
+valorcomissaoTotalVendas = valorTotalVendas * COMISSAO_TOTAL_VENDAS
+
+console.log("Valor Comissão Total Vendas ", valorcomissaoTotalVendas)
+
+salarioFInal = salarioFixo + valorComissaoPorCarro + valorcomissaoTotalVendas
+
+console.log(salarioFInal)
+
+
