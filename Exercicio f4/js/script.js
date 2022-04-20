@@ -2,9 +2,10 @@ v_first_avaliation = 0
 v_second_avaliation = 0
 v_continue = 's'
 v_name_students=""
-var aux = new Array()
+// var aux = new Array()
 var notasAlunos = new Array()
 v_indice = 0
+v_average=0
 
 while (v_continue=="s"){
 	// Lendo o Nome
@@ -23,6 +24,9 @@ while (v_continue=="s"){
 	while (v_second_avaliation < 0 || v_second_avaliation > 10){
 			v_second_avaliation = Number(prompt("As Notas das avaliações devem estar entre 0 e 10: "));
 	}
+	
+	notasAlunos.push([v_name_students, v_first_avaliation, v_second_avaliation])
+
 	
   	aux.push(v_name_students)
 	aux.push(v_first_avaliation)
