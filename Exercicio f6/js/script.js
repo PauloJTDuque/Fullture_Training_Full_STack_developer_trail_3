@@ -1,25 +1,56 @@
-// v_pos_number=0
-// v_neg_number=0
+v_weight = 1
+v_height = 0
+v_count = 0
+v_average = 0
+v_greatest_height = 0
+v_shorter_height = 0
+v_indice = 0
 
-// v_ent_user=prompt("Digite um número diferente de 0:");
-// while(v_ent_user == 0){
-//     v_ent_user=prompt("O número deve ser diferente de 0:");
-// }
+let a_height = new Array()
+let a_weight = new Array()
 
-// if (v_ent_user > 0){
-//     v_pos_number = v_ent_user;
-//     alert("Numero Positivo:"+v_pos_number);
-// }
-// else{
-//     v_neg_number = v_ent_user;
-//     alert("Numero Negativo:"+v_neg_number);
-// }  
+while (v_weight!=0){
+	
+	// Lendo a altura
+	v_height = Number(prompt("Digite a Altura em cm: "));
 
-var n = prompt("Digite um numero");
-var total=n/2;
-if(n%2 == 0){
-	alert("Par");
-}else{
-	alert("Impar");
+	while (v_height < 0 ){
+		v_height = Number(prompt("A altura não pode ser negativa"));
+	}
+
+	// Lendo o Peso
+	v_weight = Number(prompt("Digite o peso: "));
+	
+	while (v_weight < 0 ){
+		v_weight = Number(prompt("O peso não pode ser negativo "));
+	}
+	if (v_weight == 0){
+		alert( " Rotina Encerrada pelo Usuário ")
+		break
+	}
+	console.log(v_weight)
+
+	a_height.push([v_height])
+	a_weight.push([v_weight])
+
+	console.log(a_weight[0], a_weight[1])
 }
-alert(total);
+
+
+//Calculando a média dos pesos informados
+v_weight = 0
+for (let i = 0; i < a_weight.length; i++){                  // ?????????????????????????????????
+	v_weight =  v_weight + a_weight[i]
+	v_count = v_count + 1
+	console.log(a_weight)
+	console.log(v_weight, v_count)
+}
+v_average = v_weight / v_count
+v_greatest_height = Math.max(...a_height);
+v_shorter_height = Math.min(...a_height);
+
+alert("A média dos pesos informados é "+ v_average)
+alert("	A maior altura informada é " + v_greatest_height )
+alert("	A menor altura informada é " + v_shorter_height )
+
+alert( " Fim do Programa ")	
