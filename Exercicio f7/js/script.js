@@ -1,25 +1,30 @@
-// v_pos_number=0
-// v_neg_number=0
+let v_big_number = 0
+let v_smal_number = 0
+let v_total_number=0
 
-// v_ent_user=prompt("Digite um número diferente de 0:");
-// while(v_ent_user == 0){
-//     v_ent_user=prompt("O número deve ser diferente de 0:");
-// }
+let a_number = new Array()
 
-// if (v_ent_user > 0){
-//     v_pos_number = v_ent_user;
-//     alert("Numero Positivo:"+v_pos_number);
-// }
-// else{
-//     v_neg_number = v_ent_user;
-//     alert("Numero Negativo:"+v_neg_number);
-// }  
+//Lendo os números
 
-var n = prompt("Digite um numero");
-var total=n/2;
-if(n%2 == 0){
-	alert("Par");
-}else{
-	alert("Impar");
+for (let i = 0; i < 5; i++){                  
+	
+	let v_number_ent = 0
+	
+	v_number_ent = Number(prompt("Digite o " + Number(i+1) +"º número inteiro: "));
+	
+	while (v_number_ent % 1 != 0 ){
+		v_number_ent = Number(prompt("O número deve ser inteiro"));
+	}
+	a_number.push([v_number_ent])
+	v_total_number =  v_total_number + v_number_ent
+	// v_count = v_count + 1
 }
-alert(total);
+
+v_big_number = Math.max(...a_number);
+v_smal_number = Math.min(...a_number);
+
+
+alert("A soma dos números informados é: "+ v_total_number)
+alert("	O maior número é: " + v_big_number )
+alert("	O menor número é: " + v_smal_number )
+

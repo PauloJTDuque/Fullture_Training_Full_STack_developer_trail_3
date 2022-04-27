@@ -1,25 +1,25 @@
-// v_pos_number=0
-// v_neg_number=0
 
-// v_ent_user=prompt("Digite um número diferente de 0:");
-// while(v_ent_user == 0){
-//     v_ent_user=prompt("O número deve ser diferente de 0:");
-// }
+let a_name = new Array()
 
-// if (v_ent_user > 0){
-//     v_pos_number = v_ent_user;
-//     alert("Numero Positivo:"+v_pos_number);
-// }
-// else{
-//     v_neg_number = v_ent_user;
-//     alert("Numero Negativo:"+v_neg_number);
-// }  
+//Lendo os nomes
 
-var n = prompt("Digite um numero");
-var total=n/2;
-if(n%2 == 0){
-	alert("Par");
-}else{
-	alert("Impar");
+for (let i = 0; i < 3; i++){                  
+	
+	v_name=" "
+	
+	v_name = prompt("Digite o nome da " + Number(i+1) +"ª pessoa: ");
+	
+	// while (v_number_ent % 1 != 0 ){
+	// 	v_number_ent = Number(prompt("O número deve ser inteiro"));
+	// }
+
+	a_name.push([v_name])
 }
-alert(total);
+
+v_name = prompt("Digite o nome da pessoa a ser procurada: ");
+
+if(a_name.indexOf(v_name)>=0){
+  	alert("Achei !!! ");
+}else{
+	alert("Não achei !!! ");
+}
